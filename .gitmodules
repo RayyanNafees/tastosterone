@@ -1,0 +1,3 @@
+[submodule "nexTAS"]
+	path = nexTAS
+	url = https://github.com/RayyanNafees/nexTAS.git
