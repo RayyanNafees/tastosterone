@@ -82,7 +82,7 @@ const Login = () => {
                 token: response.data['token'],
               })
 
-              navigate.push'/master-admin')
+              navigate.push('/master-admin')
 
               //on the long run the we'll use the user email to check the level of permission and refirect accordingly
             }

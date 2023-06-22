@@ -20,7 +20,7 @@ const AddEmployee = () => {
   useEffect(() => {
     checkAuth().then(() => {
       if (localStorage.getItem('isLoggedIn') !== 'true') {
-        navigate.push'/auth/login')
+        navigate.push('/auth/login')
       }
     })
   }, [])

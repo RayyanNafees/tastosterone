@@ -27,10 +27,10 @@ const AddStudent = () => {
   useEffect(() => {
     checkAuth().then(() => {
       if (localStorage.getItem('isLoggedIn') !== 'true') {
-        navigate.push'/auth/login')
+        navigate.push('/auth/login')
       }
       if (!localStorage.getItem('familyEmail')) {
-        navigate.push'/master-admin/enroll')
+        navigate.push('/master-admin/enroll')
       }
     })
   }, [])
