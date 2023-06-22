@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { Link, useRouter, useParams } from "next/link";
-import Badge from "../../../components/Badge";
-import axios from "axios";
-import { checkAuth } from "../../../data/checkAuth";
-import { baseURL } from "../../../data/url";
-import { v4 as uuidv4 } from "uuid";
-import { authConfig } from "../../../data/authConfig";
+'use client'
 
-const StudentProfile = () => {
+import React, { useState, useEffect } from "react";
+import { Link, useRouter } from "next/link";
+import Badge from "@/app/components/Badge";
+import axios from "axios";
+import { checkAuth } from "@/app/data/checkAuth";
+import { baseURL } from "@/app/data/url";
+import { v4 as uuidv4 } from "uuid";
+import { authConfig } from "@/app/data/authConfig";
+
+const StudentProfile = ({studentID}) => {
   const [defaultMenu, setDefaultMenu] = useState(true);
   const [studentInfo, setStudentInfo] = useState(null);
   const [loadProfile, setLoadProfile] = useState(false);
   const [personalDetails, setPersonalDetails] = useState([]);
   const [info, setInfo] = useState([]);
 
-  const { studentID } = useParams();
   console.log(studentID);
 
   const navigate = useRouter();
@@ -129,7 +130,7 @@ const StudentProfile = () => {
                     className="rounded-full w-10"
                   />
                   <p className="xs:mr-9 md:mr-0 font-bold">
-                    <Link to="/master-admin/student-profile">
+                    <Link href="/master-admin/student-profile">
                       Chemistry class
                     </Link>
                   </p>

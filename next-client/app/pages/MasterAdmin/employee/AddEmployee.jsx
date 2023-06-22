@@ -1,19 +1,20 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
+'use client'
 import React, { useState, useEffect, useRef } from 'react'
-import EmployeeAccess from '../../../components/EmployeeAccess'
-import Availability from '../../../components/Availability'
-import AssignSubject from '../../../components/AssignSubject'
-import { EmployeeRegData } from '../../../data/data'
-import { checkAuth } from '../../../data/checkAuth'
+import EmployeeAccess from '@/app/components/EmployeeAccess'
+import Availability from '@/app/components/Availability'
+import AssignSubject from '@/app/components/AssignSubject'
+import { EmployeeRegData } from '@/app/data/data'
+import { checkAuth } from '@/app/data/checkAuth'
 import { useRouter } from 'next/navigation'
-import SaveGroupBtn from '../../../components/SaveGroupBtn'
-import { validateEmail } from '../../../data/validateEmail'
+import SaveGroupBtn from '@/app/components/SaveGroupBtn'
+import { validateEmail } from '@/app/data/validateEmail'
 import axios from 'axios'
-import { baseURL } from '../../../data/url'
-import { key } from '../../../data/globalData'
+import { baseURL } from '@/app/data/url'
+import { key } from '@/app/data/globalData'
 import CryptoJS from 'crypto-js'
 
-import { availabilityData, subjectData } from '../../../data/globalData'
+import { availabilityData, subjectData } from '@/app/data/globalData'
 
 const AddEmployee = () => {
   const navigate = useRouter()
@@ -127,7 +128,7 @@ const AddEmployee = () => {
           localStorage.removeItem(specialization)
           const data = resp.data
           if (resp.status === 201) {
-            navigate.push`/master-admin/employee-profile/${data.id}`)
+            navigate.push(`/master-admin/employee-profile/${data.id}`)
           }
         })
         .catch((err) => {

@@ -1,9 +1,10 @@
+'use client'
 import React, { useEffect } from "react";
-import { checkAuth } from "../../../data/checkAuth";
+import { checkAuth } from "@/app/data/checkAuth";
 import { useRouter } from "next/navigation";
-import { ReactComponent as FamilySVG } from "../../../assets/family-4-people-svgrepo-com.svg";
-import { ReactComponent as AdultSVG } from "../../../assets/men-2763099.svg";
-import EnrollModal from "../../../components/EnrollModal";
+import { ReactComponent as FamilySVG } from "@/app/assets/family-4-people-svgrepo-com.svg";
+import { ReactComponent as AdultSVG } from "@/app/assets/men-2763099.svg";
+import EnrollModal from "@/app/components/EnrollModal";
 
 const Enroll = () => {
   const navigate = useRouter();

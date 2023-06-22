@@ -1,9 +1,10 @@
+'use client'
 import React, { useState, useEffect } from "react";
-import Badge from "../../../components/Badge";
+import Badge from "@/app/components/Badge";
 import { Link, useRouter } from "next/navigation";
-import { authConfig } from "../../../data/authConfig";
-import { checkAuth } from "../../../data/checkAuth";
-import { baseURL } from "../../../data/url";
+import { authConfig } from "@/app/data/authConfig";
+import { checkAuth } from "@/app/data/checkAuth";
+import { baseURL } from "@/app/data/url";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { extractDateFromTimestamp as extractDate } from "./extractDate";
@@ -73,7 +74,7 @@ const AllEmployees = () => {
                       />
                       <p className="xs:mr-9 md:mr-0">
                         <Link
-                          to={`/master-admin/employee-profile/${employee.id}`}
+                          href={`/master-admin/employee-profile/${employee.id}`}
                         >
                           {`${employee.firstName} ${employee.lastName}`}
                         </Link>

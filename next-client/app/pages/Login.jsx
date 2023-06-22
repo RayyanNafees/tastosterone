@@ -1,8 +1,10 @@
+'use client'
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import { baseURL } from '../data/url'
+import { baseURL } from '@/app/data/url'
+
 import { useContext } from 'react'
-import { UserAuthTokenContext, key } from '../data/globalData'
+import { UserAuthTokenContext, key } from '@/app/data/globalData'
 import { useRouter } from 'next/navigation'
 import CryptoJS from 'crypto-js'
 

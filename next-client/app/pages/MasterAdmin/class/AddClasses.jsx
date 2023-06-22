@@ -1,12 +1,13 @@
+'use client'
 import React, { createContext, useState, useRef, useEffect } from "react";
 import { TbGridDots } from "react-icons/tb";
 import { HiOutlinePencil } from "react-icons/hi";
-import AddModuleModal from "../../../components/AddModuleModal";
+import AddModuleModal from "@/app/components/AddModuleModal";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
-import { authConfig } from "../../../data/authConfig";
-import { baseURL } from "../../../data/url";
-import { checkAuth } from "../../../data/checkAuth";
+import { authConfig } from "@/app/data/authConfig";
+import { baseURL } from "@/app/data/url";
+import { checkAuth } from "@/app/data/checkAuth";
 import { useRouter } from "next/navigation";
 
 export const ModuleContext = createContext();

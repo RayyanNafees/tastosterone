@@ -1,15 +1,15 @@
+'use client'
 import React, { useState, useEffect } from "react";
-import { Link, useRouter, useParams } from "next/link";
-import Badge from "../../../components/Badge";
+import { Link, useRouter } from "next/link";
+import Badge from "@/app/components/Badge";
 import { BiPlus } from "react-icons/bi";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
-import { baseURL } from "../../../data/url";
-import { authConfig } from "../../../data/authConfig";
-import { checkAuth } from "../../../data/checkAuth";
+import { baseURL } from "@/app/data/url";
+import { authConfig } from "@/app/data/authConfig";
+import { checkAuth } from "@/app/data/checkAuth";
 
-const FamilyProfile = () => {
-  const { familyID } = useParams();
+const FamilyProfile = ({ familyID }) => {
   const navigate = useRouter();
   const config = authConfig();
 
@@ -223,7 +223,7 @@ const FamilyProfile = () => {
                         />
                         <p className="xs:mr-9 md:mr-0 font-bold">
                           <Link
-                            to={`/master-admin/student-profile/${child.id}`}
+                            href={`/master-admin/student-profile/${child.id}`}
                           >
                             {`${child.firstName} ${child.lastName}`}
                           </Link>

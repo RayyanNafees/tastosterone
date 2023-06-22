@@ -1,8 +1,9 @@
+'use client'
 import React, { useEffect, useState } from "react";
-import { UserDataContext } from "../../data/globalData";
+import { UserDataContext } from "@/app/data/globalData";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { baseURL } from "../../data/url";
+import { baseURL } from "@/app/data/url";
 
 const Verify = () => {
   const isFirstRun = React.useRef(true);

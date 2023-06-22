@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { MdCancel } from 'react-icons/md'
 import { BiCalendar } from 'react-icons/bi'
@@ -5,7 +6,7 @@ import { BiCalendar } from 'react-icons/bi'
 import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
 
-import Badge from '../../../components/Badge'
+import Badge from '@/app/components/Badge'
 
 const ScheduledLessons = () => {
   const weekdays = ['MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT', 'SUN']

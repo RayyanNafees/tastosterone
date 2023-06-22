@@ -1,12 +1,13 @@
+'use client'
 import React, { useState, useRef, useEffect } from 'react'
-import SaveGroupBtn from '../../../components/SaveGroupBtn'
-import { familyRegData } from '../../../data/data'
-import { validateEmail } from '../../../data/validateEmail'
+import SaveGroupBtn from '@/app/components/SaveGroupBtn'
+import { familyRegData } from '@/app/data/data'
+import { validateEmail } from '@/app/data/validateEmail'
 import axios from 'axios'
-import { baseURL } from '../../../data/url'
-import { key } from '../../../data/globalData'
+import { baseURL } from '@/app/data/url'
+import { key } from '@/app/data/globalData'
 import CryptoJS from 'crypto-js'
-import { checkAuth } from '../../../data/checkAuth'
+import { checkAuth } from '@/app/data/checkAuth'
 import { useRouter } from 'next/navigation'
 
 const AddFamily = () => {
@@ -110,7 +111,7 @@ const AddFamily = () => {
           console.log(resp)
           const data = resp.data
           if (resp.status === 201) {
-            navigate.push`/master-admin/family-profile/${data.id}`)
+            navigate.push(`/master-admin/family-profile/${data.id}`)
           }
         })
         .catch((err) => console.log(err))

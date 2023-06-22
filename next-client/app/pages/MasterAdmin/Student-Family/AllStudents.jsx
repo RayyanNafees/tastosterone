@@ -1,11 +1,12 @@
+'use client'
 import React, { useState, useEffect } from "react";
-import Badge from "../../../components/Badge";
+import Badge from "@/app/components/Badge";
 import { Link } from "next/link";
 import { BsFilter } from "react-icons/bs";
-import { checkAuth } from "../../../data/checkAuth";
+import { checkAuth } from "@/app/data/checkAuth";
 import { useRouter } from "next/navigation";
-import { baseURL } from "../../../data/url";
-import { authConfig } from "../../../data/authConfig";
+import { baseURL } from "@/app/data/url";
+import { authConfig } from "@/app/data/authConfig";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 
@@ -73,7 +74,7 @@ const AllStudents = () => {
                       />
                       <p className="xs:mr-9 md:mr-0 font-bold">
                         <Link
-                          to={`/master-admin/student-profile/${student.id}`}
+                          href={`/master-admin/student-profile/${student.id}`}
                         >
                           {`${student.firstName} ${student.lastName}`}
                         </Link>

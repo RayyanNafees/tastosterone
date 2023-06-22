@@ -1,3 +1,4 @@
+'use client';
 import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { HiOutlineUsers } from "react-icons/hi";

@@ -1,12 +1,13 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import { MdCancel } from "react-icons/md";
-import Availability from "../../../components/Availability";
-import { availabilityData } from "../../../data/globalData";
+import Availability from "@/app/components/Availability";
+import { availabilityData } from "@/app/data/globalData";
 import axios from "axios";
-import { checkAuth } from "../../../data/checkAuth";
-import { authConfig } from "../../../data/authConfig";
+import { checkAuth } from "@/app/data/checkAuth";
+import { authConfig } from "@/app/data/authConfig";
 import { useRouter } from "next/navigation";
-import { baseURL } from "../../../data/url";
+import { baseURL } from "@/app/data/url";
 
 const ScheduleNewLesson = () => {
   const [availableData, setAvailableData] = useState([]);

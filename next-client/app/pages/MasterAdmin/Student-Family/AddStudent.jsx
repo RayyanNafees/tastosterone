@@ -1,16 +1,17 @@
+'use client'
 import React, { useState, useRef, useEffect } from 'react'
 
-import { StudentRegData } from '../../../data/data'
-import AssignSubject from '../../../components/AssignSubject'
-import SaveGroupBtn from '../../../components/SaveGroupBtn'
-import { baseURL } from '../../../data/url'
-import { validateEmail } from '../../../data/validateEmail'
-import { checkAuth } from '../../../data/checkAuth'
-import { key, subjectData } from '../../../data/globalData'
+import { StudentRegData } from '@/app/data/data'
+import AssignSubject from '@/app/components/AssignSubject'
+import SaveGroupBtn from '@/app/components/SaveGroupBtn'
+import { baseURL } from '@/app/data/url'
+import { validateEmail } from '@/app/data/validateEmail'
+import { checkAuth } from '@/app/data/checkAuth'
+import { key, subjectData } from '@/app/data/globalData'
 import { useRouter } from 'next/navigation'
 import CryptoJS from 'crypto-js'
 import axios from 'axios'
-// import { authConfig } from '../../../data/authConfig'
+// import { authConfig } from '@/app/data/authConfig'
 
 const AddStudent = () => {
   const navigate = useRouter()
@@ -125,7 +126,7 @@ const AddStudent = () => {
           console.log(resp)
           if (resp.status === 201) {
             const data = resp.data
-            navigate.push`/master-admin/student-profile/${data.id}`)
+            navigate.push(`/master-admin/student-profile/${data.id}`)
           }
         })
         .catch((err) => {

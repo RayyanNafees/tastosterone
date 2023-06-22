@@ -1,6 +1,7 @@
+'use client'
 import React from 'react'
-import Badge from '../../../components/Badge'
-import { Link } from 'next/link'
+import Badge from "@/app/components/Badge";
+import Link from 'next/link'
 
 const Classes = () => {
   return (
@@ -44,7 +45,7 @@ const Classes = () => {
               {/* I have to discuss the look of the tables on mobile because of how long class names can get */}
               {/* a good solution is to make limit to how long a class name can get or make use of cards instead of tables */}
               <td className='p-3'>
-                <Link to='/master-admin/class'>Chemistry classs</Link>
+                <Link href='/master-admin/class'>Chemistry classs</Link>
               </td>
               <td className='p-3'>Group and Private</td>
               <td className='p-3'>02/07/2022</td>

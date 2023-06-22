@@ -1,7 +1,8 @@
+'use client'
 import React, { useState } from 'react'
-import Badge from '../../../components/Badge'
-import BarChart from '../../../components/BarChart'
-import DonutChart from '../../../components/DonutChart'
+import Badge from '@/app/components/Badge'
+import BarChart from "@/app/components/BarChart";
+import DonutChart from "@/app/components/DonutChart";
 
 import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai'
 

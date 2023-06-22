@@ -1,10 +1,11 @@
+'use client'
 import React, { useState, useRef, useEffect } from "react";
-import { BranchRegData } from "../../data/data";
+import { BranchRegData } from "@/app/data/data";
 import axios from "axios";
-import { baseURL } from "../../data/url";
-import { validateEmail } from "../../data/validateEmail";
+import { baseURL } from "@/app/data/url";
+import { validateEmail } from "@/app/data/validateEmail";
 import { useRouter } from "next/navigation";
-import { check_if_branch, checkAuth } from "../../data/checkAuth";
+import { check_if_branch, checkAuth } from "@/app/data/checkAuth";
 
 const BranchReg = () => {
   const navigate = useRouter();

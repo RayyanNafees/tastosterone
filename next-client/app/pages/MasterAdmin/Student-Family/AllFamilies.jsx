@@ -1,10 +1,11 @@
+'use client'
 import React, { useState, useEffect } from "react";
-import Badge from "../../../components/Badge";
+import Badge from "@/app/components/Badge";
 import { Link, useRouter } from "next/navigation";
-import { checkAuth } from "../../../data/checkAuth";
+import { checkAuth } from "@/app/data/checkAuth";
 import axios from "axios";
-import { baseURL } from "../../../data/url";
-import { authConfig } from "../../../data/authConfig";
+import { baseURL } from "@/app/data/url";
+import { authConfig } from "@/app/data/authConfig";
 import { v4 as uuidv4 } from "uuid";
 
 const AllFamilies = () => {
@@ -74,7 +75,7 @@ const AllFamilies = () => {
                         className="rounded-full w-10"
                       />
                       <p className="xs:mr-9 md:mr-0 font-bold">
-                        <Link to={`/master-admin/family-profile/${family.id}`}>
+                        <Link href={`/master-admin/family-profile/${family.id}`}>
                           {`${family.firstName} ${family.lastName}`}
                         </Link>
                       </p>

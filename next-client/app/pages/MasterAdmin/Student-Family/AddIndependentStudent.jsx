@@ -1,16 +1,17 @@
+'use client'
 import React from "react";
 
-import AssignSubject from "../../../components/AssignSubject";
-import SaveGroupBtn from "../../../components/SaveGroupBtn";
+import AssignSubject from "@/app/components/AssignSubject";
+import SaveGroupBtn from "@/app/components/SaveGroupBtn";
 
-import { IndependentStudentRegData } from "../../../data/data";
+import { IndependentStudentRegData } from "@/app/data/data";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { checkAuth } from "../../../data/checkAuth";
-import { key, subjectData } from "../../../data/globalData";
+import { checkAuth } from "@/app/data/checkAuth";
+import { key, subjectData } from "@/app/data/globalData";
 import axios from "axios";
-import { validateEmail } from "../../../data/validateEmail";
-import { baseURL } from "../../../data/url";
+import { validateEmail } from "@/app/data/validateEmail";
+import { baseURL } from "@/app/data/url";
 import CryptoJS from "crypto-js";
 
 const AddIndependentStudent = () => {
