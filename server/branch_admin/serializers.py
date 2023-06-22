@@ -1,5 +1,13 @@
 from rest_framework import serializers, validators
-from .models import *
+from .models import (
+    ParentInfo,
+    StudentInfo,
+    EmployeeInfo,
+    ClassModel,
+    ClassSchedule,
+    Transactions,
+    Invoices,
+)
 from auth_api.models import CustomUser
 
 
@@ -10,6 +18,7 @@ valid = {
 
 class ParentSerializer(serializers.ModelSerializer):
     class Meta:
+        ref_name = "ParentSerializer"
         model = ParentInfo
 
         fields = "__all__"
@@ -75,7 +84,7 @@ class ParentSerializer(serializers.ModelSerializer):
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = StudentInfo
-
+        ref_name = "StudentSerializer"
         fields = "__all__"
 
         extra_kwargs = {
@@ -109,7 +118,7 @@ class StudentSerializer(serializers.ModelSerializer):
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = EmployeeInfo
-
+        ref_name = "EmployeeSerializer"
         fields = "__all__"
 
         extra_kwargs = {
@@ -141,8 +150,8 @@ class EmployeeSerializer(serializers.ModelSerializer):
         }
 
         def create(self, validated_data):
-            email = validated_data.get("email")
-            lastName = validated_data.get("lastName")
+            # email = validated_data.get("email")
+            # lastName = validated_data.get("lastName")
             newEmployee = EmployeeInfo.objects.create(**validated_data)
 
             newEmployee.save()
@@ -158,7 +167,7 @@ def DyanamicFullNameSerializer(model_class):
 
         class Meta:
             model = model_class
-
+            ref_name = "DyanamicFullNameSerializer"
             fields = (
                 "id",
                 "full_name",
@@ -170,7 +179,7 @@ def DyanamicFullNameSerializer(model_class):
 class ClassSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClassModel
-
+        ref_name = "ClassSerializer"
         fields = "__all__"
         extra_kwargs = {
             "title": {
@@ -195,7 +204,7 @@ class ClassSerializer(serializers.ModelSerializer):
 class ClassSearchSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClassModel
-
+        ref_name = "ClassSearchSerializer"
         fields = (
             "id",
             "title",
@@ -206,6 +215,7 @@ class ClassScheduleSerializer(serializers.ModelSerializer):
     class_type = serializers.ChoiceField(choices=ClassSchedule.ClassType.choices)
 
     class Meta:
+        ref_name = "ClassScheduleSerializer"
         model = ClassSchedule
         fields = "__all__"
 
@@ -219,7 +229,7 @@ class ClassScheduleSerializer(serializers.ModelSerializer):
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Transactions
-
+        ref_name = "TransactionSerializer"
         fields = "__all__"
         extra_kwargs = {
             "transaction_type": valid,
@@ -242,7 +252,7 @@ class TransactionSerializer(serializers.ModelSerializer):
 class InvoiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Invoices
-
+        ref_name = "InvoiceSerializer"
         fields = "__all__"
 
     def create(self, validated_data):

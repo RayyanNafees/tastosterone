@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     "branch_admin",
     "tutor",
     "corsheaders",
+    'drf_yasg', # API docs
 ]
 
 MIDDLEWARE = [

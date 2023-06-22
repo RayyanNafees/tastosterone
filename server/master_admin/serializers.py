@@ -9,6 +9,7 @@ class BranchSerializer(serializers.ModelSerializer):
     class Meta:
         model = BranchInfo
         fields = '__all__'
+        ref_name = "BranchSerializer"
         # valid = {
         #     "required": True
         # }
@@ -48,6 +49,7 @@ class BranchAdminSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BranchAdminInfo
+        ref_name = "BranchAdminSerializer"
 
         fields = '__all__'
 
