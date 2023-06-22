@@ -9,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomUser
-
+        ref_name="UserSerializer"
         fields = '__all__'
 
         extra_kwargs = {
@@ -43,7 +43,7 @@ class UserSerializer(serializers.ModelSerializer):
 class OTPSerializer(serializers.ModelSerializer):
     class Meta:
         model = OTPModel
-
+        ref_name="OTPSerializer"
         fields = '__all__'
         extra_kwargs = {
             'email': {
