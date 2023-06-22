@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { branchAdminRegFormData } from '../../data/data'
 import axios from 'axios'
-import { Navigate } from 'react-router-dom'
+import { Navigate } from 'next/link'
 import tasLogo from '../../assets/Logo.png'
 import { baseURL } from '../../data/url'
 import { UserDataContext } from '../../data/globalData'
@@ -9,9 +9,9 @@ import { validateEmail } from '../../data/validateEmail'
 
 const RegisterOrg = () => {
   return (
-    <div className='flex flex-col items-center overflow-hidden xs:w-screen xs:h-screen sm:w-full sm:h-full flex-nowrap justify-items-center'>
-      <header className='self-start sm:hidden xs:inline '>
-        <img src={tasLogo} alt='tas logo' className='w-24 mt-3 ml-2 ' />
+    <div className='xs:w-screen xs:h-screen sm:w-full sm:h-full flex flex-col flex-nowrap items-center justify-items-center overflow-hidden'>
+      <header className='sm:hidden xs:inline self-start  '>
+        <img src={tasLogo} alt='tas logo' className=' w-24 mt-3 ml-2' />
       </header>
       <RegForm />
     </div>
@@ -57,12 +57,12 @@ const RegForm = () => {
     <form className='overflow-auto reg-form'>
       <div className='text-center text-[#4B5563] mt-5'>
         <h1 className='text-lg font-bold lg:text-2xl'>Create Account</h1>
-        <p className='text-sm text-center'>
+        <p className='text-sm  text-center'>
           To use TAS platform, kindly create an account first.
         </p>
       </div>
 
-      <section className='grid items-center justify-center grid-cols-12 overflow-auto grid-row-6 gap-y-3 md:gap-x-5 p-9'>
+      <section className='grid grid-cols-12 grid-row-6 gap-y-3 md:gap-x-5 justify-center items-center p-9 overflow-auto'>
         {branchAdminRegFormData.map((input) => {
           const { label, id, inputName, placeholder, info, type } = input
 
@@ -195,9 +195,9 @@ const FormFooter = (data) => {
   }
 
   return (
-    <div className='flex flex-col col-span-12 gap-5 lg:row-start-6'>
+    <div className='lg:row-start-6 col-span-12 flex flex-col gap-5'>
       <label htmlFor='t_and_c'>
-        <p className='flex items-center text-sm text-center'>
+        <p className='text-sm text-center flex  items-center'>
           <input
             type='checkbox'
             id='t_and_c'
@@ -220,7 +220,7 @@ const FormFooter = (data) => {
       >
         Create Account
       </button>
-      <p className='flex items-center text-sm text-center'>
+      <p className='text-sm text-center flex  items-center'>
         Existing member?
         <a href='#' className='text-[#BF011B] px-1'>
           Login here
