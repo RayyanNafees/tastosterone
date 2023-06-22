@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Open Sans', sans-serif;
+  }
+  body {
+    @apply lg:bg-[#FAF5F5] sm:overflow-hidden;
+  }
+  .org-reg-body {
+    /* @apply bg-white lg:bg-[#FAF5F5] flex flex-col lg:flex-row w-full h-screen overflow-hidden; */
+    @apply bg-white sm:bg-[#FAF5F5] sm:flex;
+  }
+
+  .reg-page-aside {
+    background-image: url('assets/reg-side-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .reg-page-aside-transparent {
+    background-image: url('assets/pattern.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .reg-form {
+    /* @apply bg-white h-[42.13rem] w-[44.13rem] lg:border-t-[3px] lg:border-[#CC3449] rounded-[10px]; */
+    @apply bg-white sm:border-t-[3px] sm:border-[#CC3449] sm:rounded-[10px] py-2 xs:mt-2 sm:mt-10;
+  }
+
+  .reg-form-input {
+    @apply w-full px-[10px] py-[14px] border border-[#9CA3AF] rounded-[6px]  placeholder:text-[#D1D5DB] outline-none;
+  }
+  .reg-form-input-error {
+    @apply w-full px-[10px] py-[14px] border border-red-600 rounded-[6px]  placeholder:text-red-600;
+  }
+
+  .select-input {
+    @apply w-full h-[3.25rem] mt-0.5 border border-[#9CA3AF] rounded-md text-sm text-[#4B5563];
+  }
+  .body-container {
+    overflow: scroll !important;
+  }
+  .button {
+    @apply bg-[#031F42] text-white py-3 px-10 rounded-md shadow-button text-center font-semibold tracking-[-0.02rem];
+  }
+  /* class input styles */
+  .class-input {
+    @apply w-full h-16 py-[14px] px-[10px] border border-[#D1D5DB] rounded-md;
+  }
+  .class-input-label {
+    @apply font-semibold text-xl text-[#4B5563];
+  }
+
+  .class-page-subheading {
+    @apply text-xl font-semibold text-[#031F42] mb-5;
+  }
+
+  .class-paragraph {
+    @apply text-lg text-[#4B5563] font-normal leading-8 tracking-[-0.02em];
+  }
+  .filter-btn {
+    @apply bg-[#F3F4F6] rounded text-[#1F2937] px-3 py-2 text-sm;
+  }
+  .active-filter-btn {
+    @apply bg-[#FAF5F5] rounded text-[#BF011B] px-3 py-2 text-sm;
+  }
+  .class-badge-bg {
+    @apply bg-class-badge-bg;
+  }
+}
