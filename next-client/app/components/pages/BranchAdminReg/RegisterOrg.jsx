@@ -3,7 +3,6 @@ import React, { useState, useRef } from 'react'
 import { branchAdminRegFormData } from '@/app/data/data'
 import axios from 'axios'
 import { Link } from 'next/link'
-import tasLogo from '@/app/assets/Logo.png'
 import { baseURL } from '@/app/data/url'
 import { UserDataContext } from '@/app/data/globalData'
 import { validateEmail } from '@/app/data/validateEmail'
@@ -12,7 +11,7 @@ const RegisterOrg = () => {
   return (
     <div className='flex flex-col items-center overflow-hidden xs:w-screen xs:h-screen sm:w-full sm:h-full flex-nowrap justify-items-center'>
       <header className='self-start sm:hidden xs:inline '>
-        <img src={tasLogo} alt='tas logo' className='w-24 mt-3 ml-2 ' />
+        <img src='/Logo.ong' alt='tas logo' className='w-24 mt-3 ml-2 ' />
       </header>
       <RegForm />
     </div>

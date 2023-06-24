@@ -21,13 +21,13 @@
   }
 
   .reg-page-aside {
-    background-image: url('assets/reg-side-bg.png');
+    background-image: url('/reg-side-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .reg-page-aside-transparent {
-    background-image: url('assets/pattern.png');
+    background-image: url('/pattern.png');
     background-repeat: no-repeat;
     background-size: cover;
   }

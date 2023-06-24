@@ -6,7 +6,6 @@ import { UserAuthTokenContext } from "./data/globalData";
 
 const open_sans = Open_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
-  style: "italic",
   display: "swap",
   subsets: ["latin"],
 });

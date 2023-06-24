@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'next/link'
 
-import tasLogo from '../../assets/Logo.png'
 import { RxCaretRight, RxCaretDown } from 'react-icons/rx'
 
 import { MenuItems, SubMenu } from '../../data/adminMenuData'
@@ -117,7 +116,7 @@ const Navbar = () => {
   return (
     <div className={nav_toggle_style}>
       <header className='hidden lg:inline-block p-3 text-[#4B5563] text-sm font-semibold leading-9 border-b'>
-        <img src={tasLogo} alt='TAS LOGO' />
+        <img src='/Logo.png' alt='TAS LOGO' />
         <h1>Adminstrator Dashboard</h1>
       </header>
 
@@ -129,7 +128,7 @@ const Navbar = () => {
             <div className='flex flex-col gap-0'>
               <Link to={url}>
                 <span className='flex flex-row items-center justify-between gap-1 text-[#4B5563] h-12 w-full'>
-                  <span className='flex gap-1 items-center'>
+                  <span className='flex items-center gap-1'>
                     {icon}
                     <p className='font-semibold '>{title}</p>
                   </span>

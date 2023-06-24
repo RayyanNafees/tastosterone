@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
-import tasLogo from '@/app/assets/Logo.png'
-
+// import tasLogo from '@/app/assets/Logo.png'
+// import Image from 'next/image'
 import { BsFacebook, BsTwitter, BsLinkedin } from 'react-icons/bs'
 
 import { UserDataContext } from '@/app/data/globalData'
@@ -12,7 +12,7 @@ const BranchAdminSharedLayout = ({ children }) => {
     return (
       <aside className='reg-page-aside xs:hidden sm:inline sm:w-3/12 sm:h-[screen]'>
         <div className='flex flex-col justify-between w-full h-screen px-2 py-3 reg-page-aside-transparent'>
-          <img src={tasLogo} className='xs:hidden sm:inline w-28' />
+          <img src='/Logo.png' className='xs:hidden sm:inline w-28' />
           <span className='font-inter text-white tracking-[-0.02rem] leading-7 flex flex-col gap-3 xs:row-start-1 xs:row-end-2 sm:row-start-3 sm:row-end-4'>
             <h2 className=' font-semibold text-[28px] text-left '>
               We’re #1 choice for managing your teaching business.
