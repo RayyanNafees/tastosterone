@@ -1,8 +1,8 @@
 'use client'
+
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { baseURL } from '@/app/data/url'
-
 import { useContext } from 'react'
 import { UserAuthTokenContext, key } from '@/app/data/globalData'
 import { useRouter } from 'next/navigation'
@@ -21,7 +21,7 @@ const Login = () => {
       localStorage.removeItem('user_info')
       setExecuted(false)
     }
-  }, [])
+  }, [executed])
 
   // useEffect ends here
   // state values that saves error data
@@ -31,7 +31,7 @@ const Login = () => {
   const [errorData, setErrorData] = useState('')
 
   // global data for user auth token and email
-  const {  setAuthData } = useContext(UserAuthTokenContext)
+  const { authData, setAuthData } = useContext(UserAuthTokenContext)
 
   const navigate = useRouter()
 
