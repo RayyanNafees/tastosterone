@@ -1,7 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
 
   theme: {
     screens: {
@@ -14,7 +21,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        openSans: ['Open Sans'],
+        openSans: ['Open Sans', ...defaultTheme.fontFamily.sans],
         montserrat: 'Montserrat',
         inter: ['Inter', 'sans-serif'],
       },
@@ -28,6 +35,11 @@ module.exports = {
         summaryBox: '0px 3.76594px 3.77px rgba(196, 196, 196, 0.25)',
         button: '0px 4px 14px rgba(0, 0, 0, 0.15)',
         navbar: '4px 0px 4px rgba(0, 0, 0, 0.05)',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },

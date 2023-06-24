@@ -1,3 +1,3 @@
-import BranchAdminSharedLayout from "@/app/pages/BranchAdminReg/BranchAdminSharedLayout";
+import BranchAdminSharedLayout from "@/app/components/pages/BranchAdminReg/BranchAdminSharedLayout";
 
 export default BranchAdminSharedLayout;

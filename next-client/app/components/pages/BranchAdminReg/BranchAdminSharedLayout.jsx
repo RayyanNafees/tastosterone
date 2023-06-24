@@ -8,6 +8,7 @@ import { UserDataContext } from "@/app/data/globalData";
 
 const BranchAdminSharedLayout = ({children}) => {
   const [regData, setRegData] = useState({});
+  alert(tasLogo)
   const SideBar = () => {
     return (
       <aside className="reg-page-aside xs:hidden sm:inline sm:w-3/12 sm:h-[screen]">
@@ -45,7 +46,7 @@ const BranchAdminSharedLayout = ({children}) => {
       <div className="org-reg-body font-openSans ">
         <SideBar />
       </div>
-      <div className="overflow-hidden flex flex-col sm:w-9/12">
+      <div className="flex flex-col overflow-hidden sm:w-9/12">
         {children}
       </div>
     </UserDataContext.Provider>

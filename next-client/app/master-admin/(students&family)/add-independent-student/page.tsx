@@ -1,3 +1,3 @@
-import AddIndependentStudent from '@/app/pages/MasterAdmin/Student-Family/AddIndependentStudent'
+import AddIndependentStudent from '@/app/components/pages/MasterAdmin/Student-Family/AddIndependentStudent'
 
 export default AddIndependentStudent;

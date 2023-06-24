@@ -1,2 +1,2 @@
-import AddClass from '@/app/pages/MasterAdmin/class/AddClasses'
+import AddClass from '@/app/components/pages/MasterAdmin/class/AddClasses'
 export default AddClass;

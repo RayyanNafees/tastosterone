@@ -1,3 +1,3 @@
-import RegisterOrg from "@/app/pages/BranchAdminReg/RegisterOrg";
+import RegisterOrg from "@/app/components/pages/BranchAdminReg/RegisterOrg";
 
 export default RegisterOrg

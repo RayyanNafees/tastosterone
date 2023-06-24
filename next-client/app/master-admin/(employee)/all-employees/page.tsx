@@ -1,2 +1,2 @@
-import AllEmployees from "@/app/pages/MasterAdmin/employee/AllEmployees";
+import AllEmployees from "@/app/components/pages/MasterAdmin/employee/AllEmployees";
 export default AllEmployees;

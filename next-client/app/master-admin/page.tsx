@@ -1,3 +1,3 @@
-import Dashboard from '@/app/pages/MasterAdmin/Dashboard'
+import Dashboard from '@/app/components/pages/MasterAdmin/Dashboard'
 
 export default Dashboard

@@ -1,3 +1,3 @@
-import WelcomeOrg from '@/app/pages/MasterAdmin/WelcomeOrg'
+import WelcomeOrg from '@/app/components/pages/MasterAdmin/WelcomeOrg'
 
 export default ()=> <WelcomeOrg />

@@ -1,2 +1,2 @@
-import AddEmployee from "@/app/pages/MasterAdmin/employee/AddEmployee";
+import AddEmployee from "@/app/components/pages/MasterAdmin/employee/AddEmployee";
 export default AddEmployee;

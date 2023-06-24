@@ -1,3 +1,3 @@
-import ScheduleNewLesson from "@/app/pages/MasterAdmin/calender/ScheduleNewLesson"
+import ScheduleNewLesson from "@/app/components/pages/MasterAdmin/calender/ScheduleNewLesson"
 
 export default ScheduleNewLesson;

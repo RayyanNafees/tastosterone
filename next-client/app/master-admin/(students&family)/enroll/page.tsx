@@ -1,3 +1,3 @@
-import Enroll from '@/app/pages/MasterAdmin/Student-Family/Enroll'
+import Enroll from '@/app/components/pages/MasterAdmin/Student-Family/Enroll'
 
 export default Enroll

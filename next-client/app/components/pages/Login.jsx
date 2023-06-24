@@ -31,7 +31,7 @@ const Login = () => {
   const [errorData, setErrorData] = useState('')
 
   // global data for user auth token and email
-  const { authData, setAuthData } = useContext(UserAuthTokenContext)
+  const {  setAuthData } = useContext(UserAuthTokenContext)
 
   const navigate = useRouter()
 
